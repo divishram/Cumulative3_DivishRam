@@ -1,0 +1,31 @@
+@{
+    ViewBag.Title = "Add";
+}
+
+<head>
+    <script type="text/javascript" src="@Url.Content("/Scripts/teacher.js")"></script>
+</head>
+
+
+<h1>Create New Teacher</h1>
+
+<form action="/Teacher/Create" method="post" name="myForm">
+    
+    <div>
+        <label for="teacherfname">Enter first name: </label>
+        <input id="teacherfname" type="text" name="teacherfname"/>
+    </div>
+
+    <div>
+        <label for="teacherlname">Enter last name: </label>
+        <input id="teacherlname" type="text" name="teacherlname"/>
+    </div>
+
+    <div>
+        <label for="employee-number">Enter employee number: </label>
+        <input id="employee-number" type="text" name="employee"/>
+    </div>
+
+    <button type="button">Create New Teacher</button>
+
+</form>

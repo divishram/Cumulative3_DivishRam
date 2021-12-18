@@ -1,0 +1,49 @@
+@model BlogProject.Models.Teacher
+
+@{
+    ViweBag.Title = "Update";
+}
+
+<div id="containershow">
+    <nav>
+        <a href="/Teacher/Show/@Model.TeacherId">Back</a>
+    </nav>
+
+    <h2>Update Teacher</h2>
+
+    <form action="/Teacher/Update/@Model.TeacherId" method="POST">
+        <div class="inputrow">
+            <label for="TeacherFname">First Name: </label>
+            <input type="text" name="TeacherFname" value="@Model.TeacherFname" />
+
+        </div>
+
+        <div class="inputrow">
+            <label for="TeacherLname">Last name: </label>
+            <input type="text" name="TeacherLname" value="@Model.TeacherLname" />
+
+        </div>
+
+        <div class="inputrow">
+            <label for="HireDate">Hire Date: </label>
+            <input type="date" name="HireDate" value="@Model.HireDate" />
+
+        </div>
+
+        <div class="inputrow">
+            <label for="EmployeeNumber"></label>
+            <input type="text" name="EmployeeNumber" value="@Model.EmployeeNumber" />
+
+        </div>
+
+        <div class="inputrow">
+            <label for="Salary">Salary: </label>
+            <input type="text" name="Salary" value="@Model.Salary" />
+
+        </div>
+
+        <input type="submit" name="UpdateTeacher" value="Update Teacher" />
+
+    </form>
+
+</div>

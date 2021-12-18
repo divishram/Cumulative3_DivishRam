@@ -1,0 +1,17 @@
+@model BlogProject.Models.Teacher
+
+@{
+    ViewBag.Title = "delete";
+}
+
+<h1>Deleting a teacher</h1>
+
+<a href="/Teacher/Show/@Model.TeacherId">cancel</a>
+<p>Continue to delete @Model.TeacherFName @Model.TeacherLname ?</p>
+<p>This action can't be reversed</p>
+
+
+
+<form action="/Teacher/Delete/@Model.TeacherId" method="post">
+    <button>Delete</button>
+</form>

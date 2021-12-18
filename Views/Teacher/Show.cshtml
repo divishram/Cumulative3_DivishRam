@@ -1,0 +1,22 @@
+﻿@Model BlogProject.Models.Teacher
+
+
+
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<div id="containershow">
+    <nav>
+        <a href="/Teacher/List">Back to Teachers</a>
+        <a href="/Teacher/DeleteConfirm/@Model.Teacher.TeacherId">Delete</a>
+        <a href="/Teacher/Update/@Model.TeacherId">Update</a>
+    </nav>
+
+    <h2>@Model.Teacher.TeacherFname @Model.Teacher.TeacherLname</h2>
+    <p>Member Since @Model.Teacher.TeacherHireDate.ToString("dd-MM-yyyy")</p>
+    <p>Employee number: @Model.EmployeeNumber</p>
+    <p>Salary: @Model.Teacher.Salary</p>
+
+</div>
